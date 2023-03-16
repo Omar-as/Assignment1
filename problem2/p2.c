@@ -89,13 +89,13 @@ int main(int argc, char *argv[])
             avg += elapsedTime;
 
 
-            printf("%d child read %s\n",i,read_msg);
+            printf("Child %d Executed in %s millis\n",i+1,read_msg);
             close(fd2[READ_END]);
         }
     }
     avg = avg/n;
-    printf("Max: %f\n",max);
-    printf("Min: %f\n",min);
-    printf("Avg: %f\n",avg);
+    printf("\nMax: %f millis\n",max);
+    printf("Min: %f millis\n",min);
+    printf("Avgerage: %f millis\n",avg);
     return 0;
 }
