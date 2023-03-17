@@ -21,6 +21,7 @@ void makeLifeSimple(int start, int end, int target){
             return;
         }
     }
+    exit(1);
 }
 
 int main(int argc, char *argv[]){
