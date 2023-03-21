@@ -1,24 +1,12 @@
 # Comp304 - Operating Systems Assignment 1
 
-### About: 
-This assignment is split into 3 problems.
+## Dependencies:
+- gcc 12.2.0
 
-I am using [NIXOS](https://en.wikipedia.org/wiki/NixOS)
-There are three files that are required my OS:
-- `flake.nix`
-- `flake.lock`
-- `.direnv`
-
-`flake.nix` Allows you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix file. [Useful link](https://www.tweag.io/blog/2020-05-25-flakes/)
-
-`flake.lock` Pins those dependencies to exact revisions to ensure reproducible evaluation.
-
-`.direnv` in short, it’s a way to automatically enter a Nix shell environment when entering a directory.
-
-### Problem 1 :  Forks
+## Problem 1 :  Forks
 In Unix/Linux, new processes can be created using the **fork()** system call. Calling **fork()** creates a copy of calling process and the new process starts executing immediately. After the **fork()** call, both parent and child processes start executing the same code.
 
-#### Part (a)
+### Part (a)
 Write a C program that calls **fork()** n times consecutively where n is an integer parameter
 provided as a command-line argument. Then each of the forked processes prints its ID, its
 parent’s ID and its level in the process tree (The level of the main process is 0). **Run the
@@ -31,7 +19,7 @@ gcc p1a.c -o main
 ```
 - n = the nuber of children you would like to fork.
 
-#### Part (b)
+### Part (b)
 Write a C program that forks a child process that immediately becomes a zombie process.
 This zombie process must remain in the system for at least 5 seconds.
 - Use the **sleep()** call for the time requirement
@@ -46,7 +34,7 @@ gcc p1a.c -o main
 ```
 The zombie process would show up as Z
 
-### Problem 2 :  Pipes
+## Problem 2 :  Pipes
 Rather than duplicating the parent process, we can create a new process for the children to
 execute using the **exec()** family of calls, which the parent can monitor. In this part you will
 write a simple benchmarking program that measures how long programs take to execute.
@@ -75,7 +63,7 @@ Example:
 ./main 5 ls -la
 ```
 
-### Problem 3 :  Shared Memory
+## Problem 3 :  Shared Memory
 
 In this part you will be implementing a program to search for a given number in a sequence
 using multiple processes.
