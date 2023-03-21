@@ -4,13 +4,16 @@
 This assignment is split into 3 problems.
 
 I am using [NIXOS](https://en.wikipedia.org/wiki/NixOS)
-There are two files that are required my OS:
+There are three files that are required my OS:
 - `flake.nix`
 - `flake.lock`
+- `.direnv`
 
 `flake.nix` Allows you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix file. [Useful link](https://www.tweag.io/blog/2020-05-25-flakes/)
 
 `flake.lock` Pins those dependencies to exact revisions to ensure reproducible evaluation.
+
+`.direnv` in short, it’s a way to automatically enter a Nix shell environment when entering a directory.
 
 ### Problem 1 :  Forks
 In Unix/Linux, new processes can be created using the **fork()** system call. Calling **fork()** creates a copy of calling process and the new process starts executing immediately. After the **fork()** call, both parent and child processes start executing the same code.
