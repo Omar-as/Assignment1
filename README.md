@@ -9,6 +9,7 @@ There are two files that are required my OS:
 - `flake.lock`
 
 `flake.nix` Allows you to specify your code's dependencies in a declarative way, simply by listing them inside a flake.nix file. [Useful link](https://www.tweag.io/blog/2020-05-25-flakes/)
+
 `flake.lock` Pins those dependencies to exact revisions to ensure reproducible evaluation.
 
 ### Problem 1 :  Forks
